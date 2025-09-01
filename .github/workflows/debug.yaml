@@ -10,5 +10,5 @@ jobs:
        run: | 
              docker run hello-world
              exit 1
-     - name: Display date and time
+     - name: Display date and time check
        run: echo "Date and time is $(date)"
