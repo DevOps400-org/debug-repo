@@ -1,0 +1,14 @@
+name: Debug logging
+on: push
+jobs:
+  debug_logs:
+    runs-on: ubuntu-latest
+    steps:
+     - name: docker info
+       run: docker info
+     - name: docker run
+       run: | 
+             docker run hello-world
+             exit 1
+     - name: Display date and time
+       run: echo "Date and time is $(date)"
