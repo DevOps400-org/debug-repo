@@ -23,6 +23,7 @@ on:
                 description: 'Enviornment to run tests against'
                 required: true
                 type: environment
+                default: develop
 jobs:
     print-tag:
         runs-on: ubuntu-latest
