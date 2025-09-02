@@ -81,7 +81,7 @@ jobs:
         run: echo "Running tests..."
 
 
-      # Uncomment to deploy based on the selected environment
-      - name: Deploy to ${{ inputs.environment }}
-        environment: ${{ inputs.environment }}
-        run: echo "Deploying to ${{ inputs.environment }}"
+    #   # Uncomment to deploy based on the selected environment
+    #   - name: Deploy to ${{ inputs.environment }}
+    #     environment: ${{ inputs.environment }}
+    #     run: echo "Deploying to ${{ inputs.environment }}"
