@@ -30,4 +30,4 @@ jobs:
         steps:
             - name: check tags
               run: | 
-                    echo "Tags: ${{ inputs.tags }}""
+                    echo "Tags: ${{ inputs.tags }}"
