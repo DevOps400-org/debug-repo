@@ -1,0 +1,33 @@
+name: Checking input
+on:
+    workflow_dispatch: 
+        inputs:
+            logLevel:
+                description: 'Log level'
+                type: choice
+                required: true
+                default: warning
+                options:
+                    - info
+                    - warning
+                    - debug
+            print_tags:
+                description: 'Print tags to STDOUT'
+                required: true
+                type: boolean
+            tags:
+                description: 'Test scenario tags'
+                required: true
+                type: string
+            enviornment:
+                description: 'Enviornment to run tests against'
+                required: true
+                type: environment
+jobs:
+    print-tag:
+        runs-on: ubuntu-latest
+        if: ${{ inputs.print_tags }}
+        steps:
+            - name: check tags
+              run: | 
+                    echo "Tags: ${{ inputs.tags }}""
